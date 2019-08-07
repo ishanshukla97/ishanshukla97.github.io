@@ -3,10 +3,10 @@ import AnimText from "../AnimText";
 
 const Header = props => {
 	const sentenceArr = [
-		"Robust Backends",
-		"Websites",
-		"Elegant UI",
-		"Modular Systems"
+		"robust backends",
+		"websites",
+		"elegant UI",
+		"modular systems"
 	];
 	const max = sentenceArr.length;
 
