@@ -1,9 +1,15 @@
 .anim-text {
 	position: relative;
-	display: block;
+	display: inline-block;
+	padding: 0 1rem;
+
+	&__word:first-child {
+		position: relative;
+	}
 
 	&__word {
 		position: absolute;
+		top: 0;
 	}
 
 	&__word--inactive &__letter {
@@ -21,11 +27,4 @@
 		transform: translateX(40px);
 		transition: transform 0.1s ease-in, opacity 80ms ease-in;
 	}
-}
-
-.abs-center {
-	font-size: 5rem;
-	text-align: center;
-	height: 10rem;
-	padding: 1rem 50rem;
 }

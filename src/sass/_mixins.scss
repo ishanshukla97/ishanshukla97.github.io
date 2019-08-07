@@ -24,12 +24,18 @@
 
 /*
 $breakpoint argument choices
+- phone-sm
 - phone
 - tab-port
 - tab-land
 - big-desktop
 */
 @mixin respond($breakpoint) {
+	@if $breakpoint == phone-sm {
+		@media (max-width: 20em) {
+			@content;
+		}
+	}
 	@if $breakpoint == phone {
 		@media (max-width: 37.5em) {
 			//600px
