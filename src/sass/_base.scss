@@ -38,6 +38,7 @@ body {
 }
 
 .heading-primary {
+	display: inline-block;
 	font-size: 10rem;
 	font-weight: 500;
 	@include respond(tab-land) {
@@ -51,6 +52,7 @@ body {
 	}
 }
 .heading-secondary {
+	display: block;
 	font-size: 4rem;
 	font-weight: 500;
 	@include respond(tab-land) {

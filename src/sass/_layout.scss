@@ -219,6 +219,230 @@
 	}
 }
 
+.section-contact {
+	background-color: $color-primary;
+	color: white;
+	text-align: center;
+
+	&__content {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+
+		@include respond(tab-port) {
+			flex-direction: column;
+		}
+
+		&--1 {
+			width: 50%;
+			padding: 5rem;
+
+			@include respond(tab-port) {
+				width: 100%;
+			}
+		}
+		&--2 {
+			width: 50%;
+			padding: 5rem;
+
+			@include respond(tab-port) {
+				width: 100%;
+			}
+		}
+
+		&--fiverr {
+			padding: 1.4rem;
+			transition: all 0.2s;
+			border: 3px solid green;
+			display: inline-block;
+			margin: 4rem auto;
+			color: white;
+
+			&:visited,
+			&:focus {
+				text-decoration: none;
+				color: white;
+			}
+
+			&:hover {
+				text-decoration: none;
+				background-color: green;
+				transform: translateY(-2px);
+				color: white;
+			}
+		}
+	}
+}
+
+.form {
+	margin: 5rem 0;
+
+	&__group:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	&__input {
+		font-size: 1.5rem;
+		font-family: inherit;
+		color: inherit;
+		padding: 1.5rem 2rem;
+		border-radius: 2px;
+		border: none;
+		background-color: rgba(white, 0.05);
+		border-bottom: 3px solid transparent;
+		width: 90%;
+		transition: all 0.3s;
+		display: block;
+		margin: 0 auto;
+
+		&:focus {
+			outline: none;
+			border-bottom: 3px solid green;
+		}
+
+		&:focus:invalid {
+			border-bottom: 3px solid orange;
+		}
+
+		&::-webkit-input-placeholder {
+			color: $color-grey-light-1;
+		}
+	}
+
+	&__label {
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin: 0.7rem auto;
+		width: 85%;
+		display: block;
+		transition: all 0.3s;
+		text-align: left;
+	}
+
+	&__input:placeholder-shown + &__label {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-4rem);
+	}
+
+	&__submit-btn {
+		position: relative;
+		padding: 1rem 4rem;
+		font-size: 2rem;
+		border: 2px solid white;
+		background-color: transparent;
+		transition: all 0.5s;
+		color: white;
+
+		&:hover {
+			border-radius: 2rem;
+			transform: translateY(-1px);
+		}
+		&:active {
+			transform: translateY(4px);
+		}
+
+		&--loading {
+			&:before {
+				content: "";
+				box-sizing: border-box;
+				position: absolute;
+				top: 50%;
+				left: 12%;
+				width: 20px;
+				height: 20px;
+				margin-top: -10px;
+				margin-left: -10px;
+				border-radius: 50%;
+				border: 2px solid #ccc;
+				border-top-color: #000;
+				animation: spinner 0.6s linear infinite;
+			}
+		}
+		&--success {
+			border: 2px solid green;
+			&:before,
+			&:after {
+				content: "";
+				box-sizing: border-box;
+				position: absolute;
+				top: 45%;
+				left: 25%;
+				width: 2px;
+				margin-top: -10px;
+				margin-left: -10px;
+				background-color: white;
+			}
+			&:before {
+				height: 2.5rem;
+				transform: rotate(45deg);
+			}
+			&:after {
+				top: 70%;
+				left: 17%;
+				height: 1rem;
+				transform: rotate(-45deg);
+			}
+		}
+		&--failed {
+			border: 2px solid red;
+			&:before,
+			&:after {
+				content: "";
+				box-sizing: border-box;
+				position: absolute;
+				top: 45%;
+				left: 20%;
+				height: 2.5rem;
+				width: 2px;
+				margin-top: -10px;
+				margin-left: -10px;
+				background-color: white;
+			}
+			&:before {
+				transform: rotate(45deg);
+			}
+			&:after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
+.social-content {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	left: 0;
+	top: 30%;
+	background-color: $color-primary;
+	width: 6rem;
+	z-index: 1000;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+
+	@include respond(tab-port) {
+		position: relative;
+		flex-direction: row;
+		height: 6rem;
+		width: 15rem;
+	}
+
+	&__btn {
+		display: block;
+		padding: 1rem;
+		width: 100%;
+		transition: all 0.2s;
+		&:hover {
+			transform: scale(1.1);
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
 .content-wrap {
 	width: 100%;
 	padding: 0 20rem;

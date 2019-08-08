@@ -1,4 +1,5 @@
 import React from "react";
+import Social from "../Social";
 import AnimText from "../AnimText";
 
 const Header = props => {
@@ -65,6 +66,7 @@ const Header = props => {
 					</p>
 				</div>
 			</div>
+			<Social />
 		</header>
 	);
 };
