@@ -2,7 +2,7 @@ import React from "react";
 
 const Projects = props => {
 	return (
-		<section className="section-projects">
+		<section className="section-projects" ref={props.mref}>
 			<h1 className="heading-primary u-margin-bottom-big">Projects</h1>
 			<div className="section-projects__card">
 				<div className="section-projects__image">

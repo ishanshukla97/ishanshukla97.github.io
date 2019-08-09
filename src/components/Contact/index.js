@@ -33,7 +33,7 @@ const Contact = props => {
 	};
 
 	return (
-		<section className="section-contact">
+		<section className="section-contact" ref={props.mref}>
 			<h1 className="heading-primary u-margin-bottom-big u-margin-top-big">
 				Contact
 			</h1>
@@ -96,7 +96,11 @@ const Contact = props => {
 								Message
 							</label>
 						</div>
-						<button className={"form__submit-btn form__submit-btn" + status}>
+						<button
+							className={
+								"form__submit-btn form__submit-btn" + status
+							}
+						>
 							Submit
 						</button>
 					</form>

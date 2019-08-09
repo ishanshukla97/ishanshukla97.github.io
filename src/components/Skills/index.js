@@ -2,7 +2,7 @@ import React from "react";
 
 const Skills = props => {
 	return (
-		<section className="section-skills">
+		<section className="section-skills" ref={props.mref}>
 			<h1 className="heading-primary u-margin-bottom-big">Tech Stack</h1>
 			<div className="section-skills__content-wrap">
 				<div className="section-skills__card">

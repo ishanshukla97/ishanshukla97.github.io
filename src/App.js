@@ -7,13 +7,19 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 
 function App() {
+	const projectsRef = React.useRef(null);
+	const skillsRef = React.useRef(null);
+	const contactRef = React.useRef(null);
+
+	const refsList = [projectsRef, skillsRef, contactRef];
+
 	return (
 		<React.Fragment>
-			<NavBar />
+			<NavBar itemRefs={refsList} />
 			<Header />
-			<Projects />
-			<Skills />
-			<Contact />
+			<Projects mref={projectsRef} />
+			<Skills mref={skillsRef} />
+			<Contact mref={contactRef} />
 		</React.Fragment>
 	);
 }

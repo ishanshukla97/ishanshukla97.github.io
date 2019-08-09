@@ -27,3 +27,17 @@
 .u-font-size-small {
 	font-size: 4rem;
 }
+
+.u-no-style-link {
+	*,
+	&:active,
+	&:link,
+	&:visited {
+		text-decoration: none;
+		color: white;
+	}
+	&:hover {
+		text-decoration: none;
+		color: white;
+	}
+}
