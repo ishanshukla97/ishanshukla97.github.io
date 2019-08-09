@@ -1,6 +1,8 @@
 language: node_js
 node_js:
     - "6.9.0"
+yarn:
+    - "1.16.0"
 cache:
     directories:
         - node_modules
