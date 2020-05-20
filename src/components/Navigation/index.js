@@ -20,7 +20,7 @@ const NavBar = props => {
 			</div>
 			<div className="navigation__item">
 				<a
-					href="https://drive.google.com/open?id=1SlVAxeXCutBcd02A9sSBgR6a_hIJzY2r"
+					href="https://drive.google.com/open?id=1yDHR7rsa71sMJ3qoPTW5quouVSKWROPD"
 					className="u-no-style-link"
 				>
 					Resume
